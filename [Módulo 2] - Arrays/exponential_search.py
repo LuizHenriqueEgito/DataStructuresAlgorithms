@@ -9,16 +9,6 @@ def binary_search(nums: int, n: int, l, r) -> int:
             r = mid
     return -1
 
-def exponential_search(arr, target):
-    if arr[0] == target:
-        return 0
-    n = len(arr)
-    i = 1
-    while i < n and arr[i] < target:
-        i *= 2
-    if arr[i] == target:
-        return 1
-    return binary_search(arr, target, 1 // 2, min(i, n - 1))
 
 def exponential_search(array: list[int], target: int) -> int:
     if array[0] == target:
